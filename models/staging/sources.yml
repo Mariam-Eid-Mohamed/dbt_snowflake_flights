@@ -1,0 +1,28 @@
+version: 2
+
+sources:
+  - name: raw_flights
+    description: "Raw flights data and lookup tables from FLIGHTS_DATA.RAW"
+    database: FLIGHTS_DATA # your Snowflake database
+    schema: RAW
+    tables:
+      - name: FLIGHTS
+        description: "Raw flight fact table"
+
+      - name: L_AIRLINE_ID
+        description: "Airline ID lookup"
+
+      - name: L_AIRPORT
+        description: "Airport / airport code lookup"
+
+      - name: L_CARRIER_HISTORY
+        description: "Carrier history lookup"
+
+      - name: L_DISTANCE_GROUP
+        description: "Distance group lookup"
+
+      - name: L_UNIQUE_CARRIERS
+        description: "Unique carrier codes lookup"
+
+      - name: L_WORLD_AREA_CODES
+        description: "World area codes lookup"
